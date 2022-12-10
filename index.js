@@ -1,15 +1,13 @@
 const express = require('express');
 const app = express();
 
+
 app.get('/', (req, res) => {
-  console.log('hello chaudhuree');
+  
 })
 
 
-// note: router not found 
-app.use((req, res, next) => {
-  next('request url was not found!!');
-})
+
 
 
 // note: error handling middleware need to be the last middleware in the file 
