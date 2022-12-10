@@ -1,9 +1,15 @@
 const express = require('express');
 const app = express();
+const {readFile} = require('fs')
 
-
-app.get('/', (req, res) => {
-  
+app.get('/', (req, res,next) => {
+  readFile('/file-not-exist','utf-8',(err,data)=>{
+    if(err){
+      next(err);
+    }else{
+      res.send(data)
+    }
+  })
 })
 
 
