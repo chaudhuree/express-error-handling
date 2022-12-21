@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
+  res.send(a)
   console.log('hello chaudhuree');
 })
 
@@ -21,7 +22,7 @@ app.use((req, res, next) => {
   next('request url was not found!!');
 })
 
-// normal use case
+//Note: normal use case
 // app.use((err, req, res, next) => {
 //   // docs:all error related things will be found in the error obj 
 //   if (err.message) {
